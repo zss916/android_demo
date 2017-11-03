@@ -1,1 +1,27 @@
-111
+配置GitHub出现几个问题：
+1.id_rsd文件，建议通过命令获取
+  $ cd ~/.ssh
+  $ cat ~/.ssh/id_rsd.pub
+  才会出现对应格式的id_rsd文件
+  如果直接打开c/user/ssh/id_rsd出现的内容不能直接复制到key里面
+
+2.提交不上代码，连接不到远程分支
+ 错误：fatal: 'origin' does not appear to be a git repository
+       fatal: Could not read from remote repository.
+
+     Please make sure you have the correct access rights
+     and the repository exists.
+ 解决方法：
+      $ git remote add origin git@github.com:zss916/android_demo.git
+
+3.出现错误：
+  	error: src refspec develop does not match any.
+	error: failed to push some refs to 'origin'
+ 解决方法：
+      Run（有提示）
+
+      git config --global user.email "you@example.com"
+      git config --global user.name "Your Name"
+     
+  
+	
